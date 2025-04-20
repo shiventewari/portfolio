@@ -1,0 +1,339 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #3a6ea5;
+    color: white;
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3a6ea5;
+}
+
+/* Section styles */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #3a6ea5;
+    margin: 15px auto 0;
+}
+
+/* About section */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-text {
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* Interests section */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.interest-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.interest-item h3 {
+    color: #3a6ea5;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.interest-item ul {
+    list-style-position: inside;
+    margin-left: 10px;
+}
+
+.interest-item ul li {
+    margin-bottom: 8px;
+}
+
+/* Activities section */
+.activities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.activity-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.activity-item h3 {
+    color: #3a6ea5;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.activity-item ul {
+    list-style-position: inside;
+    margin-left: 10px;
+}
+
+.activity-item ul li {
+    margin-bottom: 10px;
+}
+
+.activity-item ul ul {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+/* Link to view more content */
+.view-more {
+    display: inline-block;
+    margin-left: 8px;
+    color: #3a6ea5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.view-more:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+/* Contact section */
+#contact {
+    background-color: #f0f5fa;
+}
+
+#contact p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+#contact a {
+    color: #3a6ea5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Hypertrophy Articles Page Styles */
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.article-section {
+    padding: 40px 0;
+}
+
+.article-section:nth-child(odd) {
+    background-color: #f0f5fa;
+}
+
+.article-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.article-card h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.article-date {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.article-content h4 {
+    color: #3a6ea5;
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+}
+
+.article-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.article-content ul li {
+    margin-bottom: 8px;
+}
+
+.article-summary {
+    border-left: 3px solid #3a6ea5;
+    padding-left: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-home a {
+    display: inline-block;
+    color: #3a6ea5;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #3a6ea5;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.back-to-home a:hover {
+    background-color: #3a6ea5;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .article-card {
+        padding: 20px;
+    }
+} 
