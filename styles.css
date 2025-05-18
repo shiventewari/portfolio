@@ -241,6 +241,30 @@ footer {
     color: #555;
 }
 
+.article-toc {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article-toc li {
+    margin-bottom: 12px;
+}
+
+.article-toc a {
+    color: #3a6ea5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.article-toc a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
 .article-section {
     padding: 40px 0;
 }
@@ -275,10 +299,39 @@ footer {
     line-height: 1.7;
 }
 
+.article-content-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+    max-width: 100%;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    word-spacing: 0.05em;
+    padding: 0 5px;
+}
+
+.article-content-text h5 {
+    color: #3a6ea5;
+    font-size: 1.15rem;
+    margin: 20px 0 12px;
+    font-weight: 600;
+}
+
+.article-content-text p {
+    margin-bottom: 16px;
+}
+
 .article-content h4 {
     color: #3a6ea5;
     margin: 25px 0 15px;
     font-size: 1.3rem;
+}
+
+.article-content h5 {
+    color: #3a6ea5;
+    margin: 25px 0 15px;
+    font-size: 1.0rem;
 }
 
 .article-content ul {
