@@ -55,7 +55,12 @@
                     <ul>
                         <li>Calisthenics</li>
                         <li>Body Building</li>
-                        <li>Rock Climbing</li>
+                        <li>Rock Climbing
+                            <ul>
+                                <li>Executing Dyno</li>
+                                <li>Vertical Climb</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="interest-item">
@@ -80,7 +85,7 @@
                         <li>Created a comprehensive Calisthenics Training Guide <a href="https://www.streetworkouthq.com/training">(Training Guide)</a></li>
                         <li>Developed a Website about Street Workout/Calisthenics <a href="https://www.streetworkouthq.com">(Website)</a></li>
                         <li>Written Articles about Muscle Physiology/Hypertrophy <a href="hypertrophy-articles.html" class="view-more">(View Articles)</a></li>
-                        <li>Calisthenics Trainer Certification (Planned for Summer 2025)</li>
+                        <li>Calisthenics Trainer Certification (<span class="planned-item">Planned for Summer 2025</span>)</li>
                     </ul>
                 </div>
                 <div class="activity-item">
@@ -88,12 +93,13 @@
                     <ul>
                         <li>Neuroscience/Brain Computer Interface Projects
                             <ul>
-                                <li>Designed system to detect muscle activation during exercises</li>
+                                <li>Design system to detect muscle activation during exercises (<span class="planned-item">Planned for Summer 2025</span>)</li>
                             </ul>
                         </li>
-                        <li>Chess Game Development</li>
-                        
-                        <img src="images/shvn-python-chess.png" alt="Chess Game" class="chess-image">
+                        <li><a href="#" id="chess-link">Chess Game Development</a></li>
+                        <ul>
+                            <li><a href="https://colab.research.google.com/drive/1xzlj65Qb1WawNOvkKzrHUBlwrMVyPYMi" target="_blank">Google Colab Link</a></li>
+                        </ul>
                     </ul>
                 </div>
                 <div class="activity-item">
@@ -101,13 +107,40 @@
                     <ul>
                         <li>Volunteering at Animal Shelter (In Progress)</li>
                     </ul>
-                </div>
-                <div class="activity-item">
                     <h3>Creative Pursuits</h3>
                     <ul>
                         <li>Origami Models</li>
-                    </ul>
+                    </ul>                    
                 </div>
+                <div class="chess-carousel" id="chess-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="images/shvn-bb-back-01.jpg" alt="Chess Gameplay" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <video src="videos/shvn-bouldering-jump.mp4" autoplay loop muted class="carousel-image"></video>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/shvn-python-chess.png" class="carousel-image">
+                        </div> 
+                        <div class="carousel-slide">
+                            <img src="images/shvn-bb-back-02.webp" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/shvn-bb-back-03.webp" class="carousel-image">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/shvn-bb-ft-01.webp" class="carousel-image">
+                        </div>
+                    </div>
+                    <button class="carousel-button prev">&lt;</button>
+                    <button class="carousel-button next">&gt;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>                
             </div>
         </div>
     </section>
@@ -124,5 +157,58 @@
             <p>&copy; 2023 Shiven's Portfolio. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let currentSlide = 0;
+            
+            // Set initial state
+            updateCarousel();
+            
+            // Next button click
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateCarousel();
+            });
+            
+            // Previous button click
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateCarousel();
+            });
+            
+            // Dot click
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    currentSlide = index;
+                    updateCarousel();
+                });
+            });
+            
+            // Update carousel state
+            function updateCarousel() {
+                slides.forEach((slide, index) => {
+                    slide.style.transform = `translateX(${(index - currentSlide) * 100}%)`;
+                });
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            // Chess link click handler
+            document.getElementById('chess-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                const carousel = document.getElementById('chess-carousel');
+                carousel.scrollIntoView({ behavior: 'smooth' });
+                currentSlide = 2; // Show the first chess image
+                updateCarousel();
+            });
+        });
+    </script>
 </body>
 </html> 
