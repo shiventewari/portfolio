@@ -46,19 +46,25 @@
                     <ul>
                         <li>Mathematics</li>
                         <li>Physics</li>
-                        <li>Neuroscience</li>
                         <li>Physiology</li>
+                        <li>Neuroscience</li>
                     </ul>
                 </div>
                 <div class="interest-item">
                     <h3>Fitness</h3>
                     <ul>
                         <li>Calisthenics</li>
-                        <li>Body Building</li>
+                        <li>Body Building
+                            <ul>
+                                <li>
+                                    Photos:<a href="#" id="bb_1" class="view-more">1</a>,<a href="#" id="bb_2" class="view-more">2</a>,<a href="#" id="bb_3" class="view-more">3</a>,<a href="#" id="bb_4" class="view-more">4</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li>Rock Climbing
                             <ul>
-                                <li>Executing Dyno</li>
-                                <li>Vertical Climb</li>
+                                <li><a href="#" id="dyno-link" class="view-more">Executing Dyno (video)</a></li>
+                                <li>Reached V5+ <a href="https://en.wikipedia.org/wiki/Grade_(climbing)#Bouldering_2" target="_blank" class="view-more">Grade</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -82,10 +88,18 @@
                 <div class="activity-item">
                     <h3>Fitness & Physiology</h3>
                     <ul>
-                        <li>Created a comprehensive Calisthenics Training Guide <a href="https://www.streetworkouthq.com/training">(Training Guide)</a></li>
-                        <li>Developed a Website about Street Workout/Calisthenics <a href="https://www.streetworkouthq.com">(Website)</a></li>
-                        <li>Written Articles about Muscle Physiology/Hypertrophy <a href="hypertrophy-articles.html" class="view-more">(View Articles)</a></li>
-                        <li>Calisthenics Trainer Certification (<span class="planned-item">Planned for Summer 2025</span>)</li>
+                        <li>Created a comprehensive Calisthenics Training Guide 
+                            <ul><a href="https://www.streetworkouthq.com/training" target="_blank" class="view-more">Training Guide</a></ul>
+                        </li>
+                        <li>Developed a Website about Street Workout/Calisthenics 
+                            <ul><a href="https://www.streetworkouthq.com" target="_blank" class="view-more">StreetWorkoutHQ.com</a></ul>
+                        </li>
+                        <li>Written Articles about Muscle Physiology/Hypertrophy 
+                            <ul><a href="hypertrophy-articles.html" target="_blank" class="view-more">View Articles</a></ul>
+                        </li>
+                        <li>Calisthenics Trainer Certification 
+                            <ul><span class="planned-item">Planned for Summer 2025</span></ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="activity-item">
@@ -93,13 +107,18 @@
                     <ul>
                         <li>Neuroscience/Brain Computer Interface Projects
                             <ul>
-                                <li>Design system to detect muscle activation during exercises (<span class="planned-item">Planned for Summer 2025</span>)</li>
+                                <li>Design system to detect muscle activation during exercises 
+                                    <ul><span class="planned-item">Planned for Summer 2025</span></ul>
+                                </li>
                             </ul>
                         </li>
-                        <li><a href="#" id="chess-link">Chess Game Development</a></li>
-                        <ul>
-                            <li><a href="https://colab.research.google.com/drive/1xzlj65Qb1WawNOvkKzrHUBlwrMVyPYMi" target="_blank">Google Colab Link</a></li>
-                        </ul>
+                        <li>Chess Game Development
+                            <ul>Python jupyter notebook on Google Colab</ul>
+                            <ul>
+                                <li><a href="#" id="chess-link" class="view-more">Screenshot of Chess Game</a></li>
+                                <li><a href="https://colab.research.google.com/drive/1xzlj65Qb1WawNOvkKzrHUBlwrMVyPYMi" target="_blank" class="view-more">Google Colab Link</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="activity-item">
@@ -107,6 +126,7 @@
                     <ul>
                         <li>Volunteering at Animal Shelter (In Progress)</li>
                     </ul>
+                    <br>
                     <h3>Creative Pursuits</h3>
                     <ul>
                         <li>Origami Models</li>
@@ -154,7 +174,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Shiven's Portfolio. All rights reserved.</p>
+            <p>&copy; 2023 Shiven Tewari. All rights reserved.</p>
         </div>
     </footer>
 
@@ -200,13 +220,45 @@
                 });
             }
             
+            // Function to scroll to carousel and show specific slide
+            function scrollToCarouselAndShow(slideIndex) {
+                const carousel = document.getElementById('chess-carousel');
+                carousel.scrollIntoView({ behavior: 'smooth' });
+                currentSlide = slideIndex;
+                updateCarousel();
+            }
+            
             // Chess link click handler
             document.getElementById('chess-link').addEventListener('click', function(e) {
                 e.preventDefault();
-                const carousel = document.getElementById('chess-carousel');
-                carousel.scrollIntoView({ behavior: 'smooth' });
-                currentSlide = 2; // Show the first chess image
-                updateCarousel();
+                scrollToCarouselAndShow(2); // Show the chess image
+            });
+            
+            // Dyno link click handler
+            document.getElementById('dyno-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                scrollToCarouselAndShow(1); // Show the bouldering jump video
+            });
+
+            // Body Building link click handler
+            document.getElementById('bb_1').addEventListener('click', function(e) {
+                e.preventDefault();
+                scrollToCarouselAndShow(0); // Show the body building image
+            });
+
+            document.getElementById('bb_2').addEventListener('click', function(e) {
+                e.preventDefault();
+                scrollToCarouselAndShow(3); // Show the body building image
+            });
+
+            document.getElementById('bb_3').addEventListener('click', function(e) {     
+                e.preventDefault();
+                scrollToCarouselAndShow(4); // Show the body building image
+            });
+
+            document.getElementById('bb_4').addEventListener('click', function(e) {
+                e.preventDefault();
+                scrollToCarouselAndShow(5); // Show the body building image
             });
         });
     </script>

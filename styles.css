@@ -19,6 +19,14 @@ body {
     padding: 0 20px;
 }
 
+/* External link indicator */
+a[target="_blank"]::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.8em;
+}
+
 /* Header styles */
 header {
     background-color: #3a6ea5;
@@ -73,7 +81,7 @@ nav ul li a:hover {
 
 /* Section styles */
 .section {
-    padding: 80px 0;
+    padding: 30px 0;
 }
 
 .section h2 {
@@ -322,7 +330,7 @@ footer {
     }
     
     .section {
-        padding: 60px 0;
+        padding: 30px 0;
     }
     
     .about-content {
