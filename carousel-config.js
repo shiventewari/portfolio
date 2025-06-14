@@ -64,13 +64,13 @@ const carouselData = {
         items: [
             {
                 type: "video",
-                src: "videos/shvn-bouldering-jump.mp4",
+                src: "https://media.githubusercontent.com/media/shiventewari/portfolio/main/videos/shvn-bouldering-jump.mp4?v=1",
                 alt: "Bouldering dyno jump",
                 caption: "Executing a Dyno Move - Rock Climbing"
             },
             {
                 type: "video",
-                src: "videos/shvn-climbing-board.mp4",
+                src: "https://media.githubusercontent.com/media/shiventewari/portfolio/main/videos/shvn-climbing-board.mp4?v=1",
                 alt: "Climbing board",
                 caption: "Climbing the Board - Rock Climbing"
             }
