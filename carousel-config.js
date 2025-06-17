@@ -35,25 +35,21 @@ const carouselData = {
                 type: "image",
                 src: "images/calisthenics/planche-1.jpg?v=3",
                 alt: "Planche progression 1",
-                caption: "Planche - Elite Pushing Strength"
             },
             {
                 type: "image",
                 src: "images/calisthenics/planche-2.jpg?v=3",
                 alt: "Planche progression 2",
-                caption: "Planche - Perfect Form"
             }   ,         
             {
                 type: "image",
                 src: "images/calisthenics/front-lever-1.jpg?v=3",
                 alt: "Front lever progression 1",
-                caption: "Front Lever - Advanced Bodyweight Hold"
             },
             {
                 type: "image",
                 src: "images/calisthenics/front-lever-2.jpg?v=3",
                 alt: "Front lever progression 2",
-                caption: "Front Lever - Full Extension"
             }
         ]
     },
@@ -117,25 +113,21 @@ const carouselData = {
                 type: "image",
                 src: "images/lego-mil-falcon/PXL_20230127_231118290.jpg?v=1",
                 alt: "Millennium Falcon build progress 1",
-                caption: "Early Build Stage - Foundation"
             },
             {
                 type: "image",
                 src: "images/lego-mil-falcon/PXL_20230202_120055871.jpg?v=1",
                 alt: "Millennium Falcon build progress 2",
-                caption: "Mid Build Stage - Structure Taking Shape"
             },
             {
                 type: "image",
                 src: "images/lego-mil-falcon/PXL_20230203_023921008.jpg?v=1",
                 alt: "Millennium Falcon near completion",
-                caption: "Near Completion - Details Added"
             },
             {
                 type: "image",
                 src: "images/lego-mil-falcon/PXL_20230203_033543151.jpg?v=1",
                 alt: "Millennium Falcon completed",
-                caption: "Final Build - The Legendary Ship Complete"
             }
         ]
     },
@@ -148,25 +140,21 @@ const carouselData = {
                 type: "image",
                 src: "images/lego-bugati/PXL_20211015_021421330.jpg?v=1",
                 alt: "Bugatti Chiron build start",
-                caption: "Build Beginning - Complex Engineering Ahead"
             },
             {
                 type: "image",
                 src: "images/lego-bugati/PXL_20211021_013525935.jpg?v=1",
                 alt: "Bugatti Chiron chassis",
-                caption: "Chassis Construction - Precision Engineering"
             },
             {
                 type: "image",
                 src: "images/lego-bugati/PXL_20211021_013604239.jpg?v=1",
                 alt: "Bugatti Chiron body work",
-                caption: "Body Assembly - Aerodynamic Design"
             },
             {
                 type: "image",
                 src: "images/lego-bugati/PXL_20211021_013825257.jpg?v=1",
                 alt: "Bugatti Chiron final details",
-                caption: "Final Details - Premium Supercar Complete"
             }
         ]
     }
